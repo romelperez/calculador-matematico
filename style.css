@@ -1,0 +1,344 @@
+/* PRHONE Calculador Matemático
+ * Instituto Técnico Industrial Laureano Gómez Castro
+ * Romel Francisco Pérez Estrada - 2011 (c)
+ * Style CSS  
+ */
+
+/* Estructura =============================================================== */
+
+body, p {
+	font-family: sans-serif,Arial,Helvetica;
+	font-size: 12px;
+	color: #0B131E;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-color: #AAC0DF;
+}
+
+a, a:link, a:active, a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#container {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	min-width: 100%;
+	height: 900px;
+	background-image: url("images/back.jpg");
+}
+
+#main {
+	display: block;
+	width: 900px;
+	padding: 4px;
+	margin: auto;
+	z-index: 2;
+}
+
+#header {
+	display: block;
+	margin: -4px auto 0;
+	width: 898px;
+	height: 258px;
+	background-image: url("images/logo.jpg");
+	overflow: hidden;
+    border-left: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+}
+
+#menu {
+	display: block;
+	height: 35px;
+	margin: 0 auto;
+	background-color: white;
+	background-image: url("images/nav.png");
+    border-left: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+}
+
+        #menu ul {
+        	margin: 0;
+        	padding: 5px 5px 0;
+        	list-style-type: none;
+        	text-align: left;
+        	vertical-align: bottom;
+        }
+
+                #menu ul li {
+        	       display: block;
+        	       margin: 5px 0 0 12px;
+        	       cursor: pointer;
+        	       padding: 0;
+        	       float: left;
+                }
+
+                #menu ul li:last-child{
+                    float: right;
+                    clear: right;
+                    text-align: right;
+                    margin-right: 12px;
+                }
+
+                #menu ul li a{
+                	text-decoration: none;
+                    color: white;
+                }
+
+                #menu ul li a:hover {
+                	color: #F7B138;
+                }
+
+#content {
+	display: table;
+    background-color: white;
+    border-left: 1px solid #BBB;
+    border-right: 1px solid #BBB;
+}
+
+#lateral-izquierdo {
+    display: table-cell;
+    width: 662px;
+    vertical-align: top;
+    padding: 15px;
+}
+
+        #lateral-izquierdo div, #lateral-derecho div {
+            display: none;
+        }
+
+        #inicio, #ayuda, #autor {
+            width: 868px;
+        }
+
+        .ejemplos {
+            font-size: 85%;
+        }
+
+        .controls {
+            display: block;
+            font-size: 80%;
+            width: 648px;
+            margin-top: 12px;
+            padding: 8px 6px;
+        }
+
+                .ui-button {
+                    margin-bottom: 3px;
+                }
+
+                .msg {
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 2px;
+                    margin-bottom: 3px;
+                }
+                
+                #mat-fun-for {
+                    font: 14px Lucida Console, Courrier;
+                    width: 81.4%;
+                    height: 18px;
+                }
+
+        #work {
+            margin-top: 12px;
+            width: 660px;
+            height: 500px;
+        }
+        
+        #data {
+            font-size: 13px;
+        }
+        
+        #point {
+            border: #99B solid 1px;
+            background-color: #EFEFFF;
+            padding: 2px 3px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+#lateral-derecho {
+	display: table-cell;
+    vertical-align: top;
+}
+        
+        .submenu {
+            width: 194px;
+            margin: 5px;
+            padding-bottom: 8px;
+        }
+                .submenu div {
+                    display: none;
+                }
+        
+                .submenu h3 {
+                    display: inline-block;
+                    margin: 7px 8px;
+                }
+                
+                .submenu ul{
+                    margin: 4px -18px;
+                }
+                
+                .submenu a{
+                    color: #002;
+                }
+
+                .submenu a:hover{
+                    cursor: pointer;
+                    color: #224;
+                }
+                
+                .submenu span {
+                    display: inline-block;
+                    margin: 6px 8px;
+                }
+
+#footer {
+	display: block;
+    background-image: url('images/footer.png');
+	height: 50px;
+}
+
+
+#footer p {
+	display: inline-block;
+	margin: auto;
+    width: 100%;
+	padding-top: 7px;
+	text-align: center;
+	font-size: 11px;
+	color: #D1D1D1;
+}
+
+#firma {
+	display: block;
+	color: #666666;
+	text-align: center;
+	margin: 1em;
+	font-size: 10px;
+}
+
+#firma a, #firma a:link, #firma a:visited, #firma a:active {
+    color: #C47F08;
+}
+
+#firma a:hover {
+    color: #FF7010;
+}
+
+
+/* Contenido ================================================================ */
+
+h1{
+    font-size: 18px;
+    margin-top: -2px;
+}
+
+h2{
+    font-size: 16px;
+    margin-top: -2px;
+    color: rgb(40,40,60)
+}
+
+h3{
+    font-size: 15px;
+    color: rgb(20,20,30)
+}
+
+p.descripciones{
+    text-align: justify;
+}
+
+p.formulas{
+    font-size: 14px;
+}
+
+span.ruta{
+    display: block;
+    margin-top: -5px;
+}
+
+span.ruta-v{
+    font-size:120%;
+    font-weight: bold;
+    color: orange;
+}
+
+img.img-content{
+    border: solid 1px #ccc;
+    margin: 5px;
+}
+
+#prop-title {
+    position: absolute;
+    display: block;
+    z-index: 100;
+}
+
+.prop-title-act {
+    border: 1px solid #779;
+    padding: 2px 6px;
+    background-color: #FFF;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* Formularios ============================================================== */
+
+input[type=text] {
+    padding: 1px;
+    border: #EEF solid 1px;
+    background-color: #F8F8FF;
+    font-family: Lucida Console;
+    font-size: 14px;
+}
+
+input[type=text]:focus {
+    border-color: #BABADD;
+    background-color: #FFF;
+}
+
+input[type=checkbox]{
+    margin: 0
+}
+
+.mfboton{
+    margin-left: 0;
+    margin-right: 0.1em;
+}
+
+.formula-valor-1{ width: 70px }
+.formula-valor-2{ width: 40px }
+
+input.spinButton {
+    border: #FDFDFF solid 0.6px;
+    border-right-width: 0px;
+    background-position:100% 0%;
+    background-repeat:no-repeat;
+    background-image: url('images/spinbutton.png');
+}
+
+input.spinButtonUp {
+    cursor: pointer;
+    background-position:100% -20px;
+}
+
+input.spinButtonDown {
+    cursor: pointer;
+    background-position:100% -40px;
+}
+
+
